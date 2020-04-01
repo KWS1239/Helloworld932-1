@@ -1,5 +1,5 @@
 import discord
-import openpyxl
+import os
 
 client = discord.Client()
 
@@ -7,9 +7,9 @@ learned_msg_list = []
 
 G = False
 
-import time
 
-now = time.localtime()
+
+
 
 import random
 
@@ -190,5 +190,5 @@ async def on_message(message): #채팅 명령어에 따른 결과
 
 
 
-
-client.run("Njg4NTU2ODY0MjkxODY0NjM2.Xm2LlA.3VHriKhL4Ng9qOfuC8kqBwNhWD0")
+access_token = os.environ["BOT TOKEN"]
+client.run(access_token)
